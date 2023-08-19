@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+
+/* 背景設定 */
+body{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #fff;
+  font-family: "Times New Roman", Arial;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.body{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  background-image: url(./ocean.jpg);
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  z-index: 0;
+}
+
+.grad{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* スタートページ画面 */
+.header{
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 305px);
+  z-index: 2;
+}
+
+.header div{
+  float: left;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.header div span{
+  color: #5379fa !important;
+}
+
+.start{
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.start input[type=button]{
+  width: 260px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.start input[type=button]:hover{
+  opacity: 0.8;
+}
+
+/* GET TIMESボタンを押下後の画面 */
+.data {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+/* 左右に分割して情報を表示できるように設定 */
+.left-side,
+.right-side {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+}
+
+.left-side {
+  min-width: 460px; 
+  max-width: 460px;
+}
+
+.right-side {
+  min-width: 460px; 
+  max-width: 460px;
+}
+
+/* 左側半分のエリア */
+/* 日付情報エリア */
+.today {
+  position: relative;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  color: #fff;
+  border-radius: 100vh 100vh 100vh 100vh;
+  background: #5591b9;
+  width:100%;
+  text-align: center;
+}
+
+/* 天気情報エリア */
+.container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+	color: #ffffff;
+	height: 250px;
+}
+
+:root {
+	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	line-height: 1.25em;
+}
+
+.weather-side1 {
+  flex: 1;
+	position: relative;
+	height: 100%;
+	border-radius: 25px;
+	background-image: url("./tokyo.png");
+  width: calc(50% - 5px);
+  margin-right: 2px;
+	-webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-side2 {
+  flex: 1;
+	position: relative;
+	height: 100%;
+	border-radius: 25px;
+	background-image: url("./tokyo2.jpg");
+  width: calc(50% - 5px);
+  margin-left: 2px;
+	-webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-gradient {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: var(--gradient);
+	border-radius: 25px;
+	opacity: 0.8;
+}
+
+.date-container {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+.date-dayname {
+	margin: 0;
+}
+
+.date-day {
+	display: block;
+}
+
+.location {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.location-icon {
+	display: inline-block;
+	height: 0.8em;
+	width: auto;
+	margin-right: 5px;
+}
+
+.weather-container {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+}
+
+.weather-icon.feather {
+	height: 60px;
+	width: auto;
+}
+
+.weather-temp {
+	margin: 0;
+	font-weight: 700;
+	font-size: 4em;
+}
+
+.weather-desc {
+	margin: 0;
+}
+
+/* 為替情報エリア */
+.exchange-rate-info {
+  padding: 0;
+  position: relative;
+}
+
+.exchange-rate-info-list {
+  position: relative;
+  padding: 0.1em 0.1em 0.1em 1em;
+  line-height: 1.5em;
+  background: #333333;
+  margin-bottom: 3px;
+  list-style-type: none!important;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/* 遅延情報エリア */
+.train-operation-info {
+  padding: 0;
+  position: relative;
+}
+
+.train-operation-info-red {
+  color: #dd2d2d;
+  border-left: solid 6px #dd2d2d;
+  background: #f1f8ff;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 0.1em 0.1em 0.1em 1em;
+  list-style-type: none!important;
+}
+
+.train-operation-info-blue {
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;
+  background: #f1f8ff;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 0.1em 0.1em 0.1em 1em;
+  list-style-type: none!important;
+}
+
+.train-operation-info-yellow {
+  color: #a7b815;
+  border-left: solid 6px #a6b420;
+  background: #f1f8ff;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 0.1em 0.1em 0.1em 1em;
+  list-style-type: none!important;
+}
+
+/* ニュース情報エリア */
+.news-info {
+  position: relative;
+  padding: 1em 0.1em 1em 1em;
+  list-style-type: none!important;
+  white-space: pre-line;
+  background: #f1f8ff;
+  box-shadow: 0px 0px 0px 5px #f1f8ff;
+  border: dashed 2px #668ad8;
+  border-radius: 9px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #2d8fdd;
+}
+
+/* 右側半分のエリア */
+/* 株価情報エリア */
+.stock-price-info {
+  position: relative;
+  line-height: 1.5;
+  padding: 0.1em 0.5em 0.1em 1.7em;
+  list-style-type: none!important;
+  background: -webkit-linear-gradient(top, rgb(110, 226, 255) 0%, #517791 100%);
+  background: linear-gradient(to bottom, rgb(110, 226, 255) 0%, #517791 100%);
+  color: #fff;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 13px; 
+}
+
+.latestClosePrice {
+  color: rgb(255, 255, 112)
+}

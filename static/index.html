@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css" />
+    <link href="static/favicon.ico" rel="icon">
+    <title>AsahinaTimes</title>
+</head>
+
+<body>
+<div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+        <div id="header">Asahina<span>Times</span></div>
+    </div>
+    <div class="start">
+        <input id="getTimes" type="button" value="GET TIMES" onclick="get_times()">
+        <div id="loading"></div>
+    </div>
+    <div class="data" id="timesdata"></div>
+    <script src="static/controller.js"></script>
+</body>
+</html>
